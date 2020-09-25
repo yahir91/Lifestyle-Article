@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class GameCategoriesController < ApplicationController
-  before_action :set_game_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_game_category, only: %i[show edit update destroy]
 
   # GET /game_categories
   # GET /game_categories.json
@@ -9,8 +11,7 @@ class GameCategoriesController < ApplicationController
 
   # GET /game_categories/1
   # GET /game_categories/1.json
-  def show
-  end
+  def show; end
 
   # GET /game_categories/new
   def new
@@ -18,8 +19,7 @@ class GameCategoriesController < ApplicationController
   end
 
   # GET /game_categories/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /game_categories
   # POST /game_categories.json
@@ -62,13 +62,14 @@ class GameCategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_game_category
-      @game_category = GameCategory.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def game_category_params
-      params.require(:game_category).permit(:category_id, :article_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_game_category
+    @game_category = GameCategory.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def game_category_params
+    params.require(:game_category).permit(:category_id, :article_id)
+  end
 end

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
-    helper_method :current_user
+  helper_method :current_user
   def log_in(user)
     session[:user_id] = user.id
   end

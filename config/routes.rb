@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resources :game_categories
   resources :categories
   resources :users
-  resources :articles
-  resources :votes
+  resources :articles do
+    resources :votes, only: [:create, :destroy]
+  end
   resources :sessions
 
   root to: 'articles#index'
