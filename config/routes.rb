@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :game_categories
+  resources :categories
   resources :users
   resources :articles
   resources :votes
+  resources :sessions
 
   root to: 'articles#index'
 

@@ -10,14 +10,27 @@
   </head>
 
   <body>
-  <header class="container-flid">
-    <div class="col-">
-      <img>
+  <header class="container-fluid">
+   <div class="row">
+    <div class="col-4">
+      <img src="1600821552304.png" alt="gamerlife-logo"/>
     </div>
-    <div class="container-fluid">
-      <a class="mr-4 col-6" href="#">Home</a>
-      <a href="#" class="col-6">New Article</a>
+    <div class="col-4 justify-content-center">
+      <a class="mr-4" href="#">
+      <%= link_to "Home", articles_path %>
+      </a>
+      <a href="#" class="col-">New Article</a>
     </div>
+    <div class="col-4 align-items-right">
+     <span>
+     <%= login_logout %>
+     </span>
+     <span>
+     <%= link_to "Sign_up", signup_path %>
+     </span>
+     
+    </div>
+   </div>
   </header>
     <%= yield %>
   </body>
