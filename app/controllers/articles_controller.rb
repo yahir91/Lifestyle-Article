@@ -5,6 +5,11 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @top_article = Article.top_article
+    @rpg_game = Article.top_game_category(1)
+    @shooter_game = Article.top_game_category(2)
+    @adventure_game = Article.top_game_category(3)
+    @sport_game = Article.top_game_category(4)
   end
 
   def show; end
@@ -17,7 +22,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
-
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -50,7 +54,11 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def game_category_params
+    params.require(:game_category).permit(:category_id)
+  end
+
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text, :image, :category_id)
   end
 end

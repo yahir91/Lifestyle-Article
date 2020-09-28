@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :votes, only: [:create, :destroy]
   end
+  resources :votes
   resources :sessions
 
   root to: 'articles#index'
