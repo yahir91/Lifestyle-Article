@@ -1,31 +1,42 @@
 <p id="notice"><%= notice %></p>
+<% unless @top_article.nil? %>
+  <section class="container-fluid">
+    <div class="row">
 
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Creator</th>
-      <th>Title</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <%= @top_article.title %>
-  <%= @rpg_game.title %>
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.creator.name %></td>
-        <td><%= article.title %></td>
-        <td><%= image_tag article.image.url %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', category_path(article.category_id) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="col-12 position-relative">
+      <%= image_tag(@top_article.image.url, :class => "img-fluid") %>
+      <h1 class="position-absolute"><%= @top_article.title %></h1>
+      <p><%= @top_article.text %></p>
+    </div>
+    
+    <% if @rpg_game.category %>
+      <div class="col-3">
+        <%= image_tag(@rpg_game.image.url, :class => "img-fluid") %>
+        <h2><%= link_to 'RPG Games', category_path(@rpg_game.category.id) %></h2>
+        <p><%=@rpg_game.title%></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+    <% if @shooter_game.category %>
+      <div class="col-3">
+        <%= image_tag(@shooter_game.image.url, :class => "img-fluid") %>
+        <h2><%= link_to 'Shooter Games', category_path(@shooter_game.category.id) %></h2>
+        <p><%=@shooter_game.title%></p>
+      </div>
+    <% end %>
+    <% if @adventure_game.category %>
+      <div class="col-3">
+        <%= image_tag(@adventure_game.image.url, :class => "img-fluid") %>
+        <h2 class=""><%= link_to 'Adventures Games', category_path(@adventure_game.category.id) %></h2>
+        <p><%=@adventure_game.title%></p>
+      </div>
+    <% end %>
+    <% if @sport_game.category %>
+      <div class="col-3">
+        <%= image_tag(@sport_game.image.url, :class => "img-fluid") %>
+        <h2><%= link_to 'Sport Games', category_path(@sport_game.category.id) %></h2>
+        <p><%=@sport_game.title%></p>
+      </div>
+    <% end %>
+    </div>
+  </section>
+<% end %>
