@@ -2,6 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
-    top: 5%;
+    bottom: 5%;
     font-size: 25px;
+    color: #ec612f;
+}
+
+.top-cat {
+    height: 500px;
+}
+
+.top-img {
+    height: 500px;
+    width: 100%;
+}
+
+.cat-img {
+    height: 300px;
+    width: 100%;
+}
+
+h2 {
+    top: 8%;
+    
+    border-bottom: 4px solid #faef1e;
+}
+
+.cat-links {
+    color:  #fdfdfd !important;
+    text-decoration: none !important;
+}
+
+.cat-title {
+    bottom: 10%;
+    font-size: 25px;
+    color: #e0dfde; 
 }
