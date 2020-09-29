@@ -17,6 +17,4 @@ module ApplicationHelper
       link_to('Vote!', article_votes_path(article_id: article.id), method: :post)
     end
   end
-
-
 end

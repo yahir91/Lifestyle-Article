@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
   resources :articles do
-    resources :votes, only: [:create, :destroy]
+    resources :votes, only: %i[create destroy]
   end
   resources :votes
   resources :sessions
