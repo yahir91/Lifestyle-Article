@@ -1,27 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Priority</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="container-fluid">
+    <div class="row">
     <% @game_category.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= vote_or_unvote_btn(article) %></td>
-      </tr>
+      <div class="col-3"><%= image_tag(article.image.url, :class => "cat-img") %></div>
+      <div class="col-3">
+      <h1 class="cat-header"><%= article.category.name %></h1>
+      <h3 class="cat-title"><%= article.title %></h3>
+      <p class="article-text"><%= article.text.truncate(450) %></p>
+      <% if current_user %>
+      <%= vote_or_unvote_btn(article) %>
+      <% end%>
+      </div>
     <% end %>
-  </tbody>
-</table>
+    </div>
+  </div>
 
-<br>
-
-<%= link_to 'New Category', new_category_path %>

@@ -10,28 +10,30 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="container-fluid">
+  <div class="article justify-content-center align-items-center d-flex flex-column">
    <div>
-      <%= form.label :image, "Attach an Image" %><br />
-      <%= form.file_field :image %>
+      <%= form.label :image, "Attach an Image", :class => "d-flex justify-content-center"  %><br />
+      <%= form.file_field :image, class: "mb-4" %>
    </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label "choose a category" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, class: "mt-4" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title, :class => "d-block d-flex justify-content-center" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label "choose a category" %>
-    <%= form.collection_select(:category_id, Category.all, :id, :name) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.label :text, :class => "d-flex justify-content-center" %>
+    <%= form.text_area :text, :class => "text-field" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
