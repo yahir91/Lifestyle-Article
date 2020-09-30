@@ -1,0 +1,6 @@
+production:
+  cloud_name: "dtcesvfmb"
+  api_key: "272439465938815"
+  api_secret: "gHMcorRXM2E6AaDhR9r1w8Bl7Oc"
+  secure: true
+  cdn_subdomain: true
