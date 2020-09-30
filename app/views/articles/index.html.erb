@@ -12,28 +12,28 @@
       <div class="col-3 position-relative">
         <%= image_tag(@rpg_game.image.url, :class => "cat-img") %>
         <h2 class="position-absolute ml-3"><%= link_to 'RPG Games', category_path(@rpg_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 cat-title"><%=@rpg_game.title%></p>
+        <p class="position-absolute ml-3 category-title"><%=@rpg_game.title%></p>
       </div>
     <% end %>
     <% if @shooter_game.category %>
       <div class="col-3 position-relative">
         <%= image_tag(@shooter_game.image.url, :class => "cat-img") %>
         <h2 class="position-absolute ml-3"><%= link_to 'Shooter Games', category_path(@shooter_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 cat-title"><%=@shooter_game.title%></p>
+        <p class="position-absolute ml-3 category-title"><%=@shooter_game.title%></p>
       </div>
     <% end %>
     <% if @adventure_game.category %>
       <div class="col-3 position-relative">
         <%= image_tag(@adventure_game.image.url, :class => "cat-img") %>
         <h2 class="position-absolute ml-3"><%= link_to 'Adventures Games', category_path(@adventure_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 cat-title"><%=@adventure_game.title%></p>
+        <p class="position-absolute ml-3 category-title"><%=@adventure_game.title%></p>
       </div>
     <% end %>
     <% if @sport_game.category %>
       <div class="col-3 position-relative">
         <%= image_tag(@sport_game.image.url, :class => "cat-img") %>
         <h2 class="position-absolute ml-3"><%= link_to 'Sport Games', category_path(@sport_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 cat-title"><%=@sport_game.title%></p>
+        <p class="position-absolute ml-3 category-title"><%=@sport_game.title%></p>
       </div>
     <% end %>
     </div>

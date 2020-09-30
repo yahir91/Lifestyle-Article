@@ -2,8 +2,12 @@ class Article < ApplicationRecord
   belongs_to :creator, class_name: 'User'
   belongs_to :category
   has_many :votes, dependent: :destroy
-  has_attached_file :image
+  has_attached_file :image,
+                    storage: :cloudinary,
+                    path: ':id/:style/:filename'
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
+  validates :title, presence: true
+  validates :text, presence: true
 
   def self.top_article
     if Vote.any?
