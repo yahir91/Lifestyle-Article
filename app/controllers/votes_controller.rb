@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class VotesController < ApplicationController
   def create
     @vote = current_user.votes.new(article_id: params[:article_id])
@@ -9,7 +7,7 @@ class VotesController < ApplicationController
     else
       redirect_to request.referrer, alert: 'You cannot vote this article.'
     end
-    end
+  end
 
   def destroy
     vote = Vote.find_by(id: params[:id], user: current_user, article_id: params[:article_id])
