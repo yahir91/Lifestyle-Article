@@ -1,0 +1,39 @@
+<%= form_with(model: article, local: true, html: {multipart: true}) do |form| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container-fluid">
+  <div class="article justify-content-center align-items-center d-flex flex-column">
+   <div>
+      <%= form.label :image, "Attach an Image", :class => "d-flex justify-content-center"  %><br />
+      <%= form.file_field :image, class: "mb-4" %>
+   </div>
+
+  <div class="field">
+    <%= form.label "choose a category" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, class: "mt-4" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title, :class => "d-block d-flex justify-content-center" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text, :class => "d-flex justify-content-center" %>
+    <%= form.text_area :text, :class => "text-field" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  </div>
+<% end %>

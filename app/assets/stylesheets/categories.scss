@@ -1,0 +1,22 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cat-header {
+  font-size: 18px;
+  color: #f29b2c;
+  border-bottom: 4px solid #f29b2c;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cat-title {
+  font-size: 17px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.article-text {
+  font-size: 15px;
+}

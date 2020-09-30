@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+  <div class="container-fluid">
+    <div class="row">
+    <% @game_category.each do |article| %>
+      <div class="col-3"><%= image_tag(article.image.url, :class => "cat-img") %></div>
+      <div class="col-3">
+      <h1 class="cat-header"><%= article.category.name %></h1>
+      <h3 class="cat-title"><%= article.title %></h3>
+      <p class="article-text"><%= article.text.truncate(450) %></p>
+      <p class="cat-title"><%= article.creator.name %></p>
+
+      <% if current_user %>
+      <%= vote_or_unvote_btn(article) %>
+      <% end%>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
