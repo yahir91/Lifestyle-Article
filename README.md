@@ -1,4 +1,4 @@
-# Book Cover app with Ruby on Rails
+# Games Articles with ruby on rails
 
 This is a blog app where you can write games articles and vote for articles created by another users.
 This Ruby on rails Capstone Project is based on an life style blog. Following the desing of [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) (by Nelson Sakwa).
