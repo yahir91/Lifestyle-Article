@@ -1,24 +1,47 @@
-# README
+# Book Cover app with Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a blog app where you can write games articles and vote for articles created by another users.
+This Ruby on rails Capstone Project is based on an life style blog. Following the desing of [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) (by Nelson Sakwa).
 
-Things you may want to cover:
+![screenshot](./app/assets/images/app-screenshot.png)
 
-* Ruby version
+## Live Demo
+[Live Demo Link](https://young-ravine-05224.herokuapp.com/)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby v2.6.5
+- Ruby on Rails v5.2.4
 
-* Database creation
+## Getting Started
+- Fork the repository and create a local one on your computer
+- Move to the repository inside the command line using `cd` and the path to the file
+- Run `bundle install`, `rails db:migrate` and `rake db:seed` in that order
+- Run `rails server`
+- inside your browser go to http://localhost:3000/
+- explore the application
 
-* Database initialization
+## Instructions
+- Create an account by clicking in Register, you do not need a password
+- In the nav you can go to home or write an article
+- In the home you can see the most voted article and the most recent article from each category.
+- Create a new game article with the title, uploading an image, the body and choosing a category.
+- You can vote for a article going to the category section.
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Yahir Cardona**
 
-* Deployment instructions
+- Github: [@yahir91](https://github.com/yahir91)
+- Twitter: [@YahirCardona3](https://twitter.com/YahirCardona3)
+- Linkedin: [linkedin](https://www.linkedin.com/in/osmar-yahir-cardona-reyes-54b40b1a7/)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
