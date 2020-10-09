@@ -15,10 +15,11 @@ This Ruby on rails Capstone Project is based on an life style blog. Following th
 
 ## Getting Started
 - Fork the repository and create a local one on your computer
+- Or you can clone it with `git clone git@github.com:yahir91/Lifestyle-Article.git` in your command line.
 - Move to the repository inside the command line using `cd` and the path to the file
-- Run `bundle install`, `rails db:migrate` and `rake db:seed` in that order
+- Run `bundle install`, `yarn install`, `rails db:migrate` and `rails db:seed` in that order
 - Run `rails server`
-- inside your browser go to http://localhost:3000/
+- Inside your browser go to http://localhost:3000/
 - explore the application
 
 ## Instructions
