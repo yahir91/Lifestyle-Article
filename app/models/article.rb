@@ -8,6 +8,8 @@ class Article < ApplicationRecord
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
   validates :title, presence: true
   validates :text, presence: true
+  validates :creator, presence: true
+  validates :category, presence: true
 
   def self.top_article
     if Vote.any?

@@ -16,6 +16,13 @@ Rails.application.configure do
 
   config.active_storage.service = :cloudinary
 
+  config.after_initialize do
+    #Enable bullet in your application
+    Bullet.enable = true
+    Bullet.alert = true
+  end
+  
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?

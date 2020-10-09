@@ -9,10 +9,7 @@
       <h3 class="cat-title"><%= article.title %></h3>
       <p class="article-text"><%= article.text.truncate(450) %></p>
       <p class="cat-title"><%= article.creator.name %></p>
-
-      <% if current_user %>
-      <%= vote_or_unvote_btn(article) %>
-      <% end%>
+      <%= check_vote(article) %>
       </div>
     <% end %>
     </div>

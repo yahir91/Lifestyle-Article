@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-<% unless @top_article.nil? %>
   <section class="container-fluid">
     <div class="row no-gutters">
 
@@ -8,34 +7,28 @@
       <h1 class="position-absolute ml-3"><%= @top_article.title %></h1>
     </div>
     
-    <% if @rpg_game.category %>
       <div class="col-3 position-relative">
-        <%= image_tag(@rpg_game.image.url, :class => "cat-img") %>
-        <h2 class="position-absolute ml-3"><%= link_to 'RPG Games', category_path(@rpg_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 category-title"><%=@rpg_game.title%></p>
+        <%= default_image(@rpg_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@rpg_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@rpg_game) %></p>
       </div>
-    <% end %>
-    <% if @shooter_game.category %>
+
       <div class="col-3 position-relative">
-        <%= image_tag(@shooter_game.image.url, :class => "cat-img") %>
-        <h2 class="position-absolute ml-3"><%= link_to 'Shooter Games', category_path(@shooter_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 category-title"><%=@shooter_game.title%></p>
+       <%= default_image(@shooter_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@shooter_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@shooter_game) %></p>
       </div>
-    <% end %>
-    <% if @adventure_game.category %>
+
       <div class="col-3 position-relative">
-        <%= image_tag(@adventure_game.image.url, :class => "cat-img") %>
-        <h2 class="position-absolute ml-3"><%= link_to 'Adventures Games', category_path(@adventure_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 category-title"><%=@adventure_game.title%></p>
+        <%= default_image(@adventure_game) %>
+        <h2 class="position-absolute ml-3"><%= category_link(@adventure_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@adventure_game) %></p>
       </div>
-    <% end %>
-    <% if @sport_game.category %>
+   
       <div class="col-3 position-relative">
-        <%= image_tag(@sport_game.image.url, :class => "cat-img") %>
-        <h2 class="position-absolute ml-3"><%= link_to 'Sport Games', category_path(@sport_game.category.id), :class => "cat-links" %></h2>
-        <p class="position-absolute ml-3 category-title"><%=@sport_game.title%></p>
+        <%= default_image(@sport_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@sport_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@sport_game) %></p>
       </div>
-    <% end %>
     </div>
   </section>
-<% end %>

@@ -15,4 +15,20 @@ module ApplicationHelper
       link_to('Vote!', article_votes_path(article_id: article.id), method: :post)
     end
   end
+
+  def check_vote(article)
+    return vote_or_unvote_btn(article) if current_user
+  end
+
+  def default_image(cat)
+    return image_tag(cat.image.url, class: 'cat-img') if cat.category
+  end
+
+  def category_link(cat)
+    return link_to "#{cat.category.name} Games", category_path(cat.category.id), class: 'cat-links' if cat.category
+  end
+
+  def cat_title(cat)
+    return cat.title if cat.category
+  end
 end

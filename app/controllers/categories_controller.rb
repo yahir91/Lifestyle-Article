@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @game_category = @category.articles.all
+    @game_category = @category.articles.all.includes([:creator])
   end
 
   def new
