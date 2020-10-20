@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dtcesvfmb
+  api_key: '272439465938815'
+  api_secret: gHMcorRXM2E6AaDhR9r1w8Bl7Oc
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dtcesvfmb
+  api_key: '272439465938815'
+  api_secret: gHMcorRXM2E6AaDhR9r1w8Bl7Oc
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dtcesvfmb
+  api_key: '272439465938815'
+  api_secret: gHMcorRXM2E6AaDhR9r1w8Bl7Oc
+  enhance_image_tag: true
+  static_file_support: false

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+  <section class="container-fluid">
+    <div class="row no-gutters">
+
+    <div class="top-cat col-12 position-relative bg-danger">
+      <%= image_tag(@top_article.image.url, :class => "top-img") %>
+      <h1 class="position-absolute ml-3"><%= @top_article.title %></h1>
+    </div>
+    
+      <div class="col-3 position-relative">
+        <%= default_image(@rpg_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@rpg_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@rpg_game) %></p>
+      </div>
+
+      <div class="col-3 position-relative">
+       <%= default_image(@shooter_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@shooter_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@shooter_game) %></p>
+      </div>
+
+      <div class="col-3 position-relative">
+        <%= default_image(@adventure_game) %>
+        <h2 class="position-absolute ml-3"><%= category_link(@adventure_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@adventure_game) %></p>
+      </div>
+   
+      <div class="col-3 position-relative">
+        <%= default_image(@sport_game) %>
+         <h2 class="position-absolute ml-3"><%= category_link(@sport_game) %></h2>
+        <p class="position-absolute ml-3 category-title"><%= cat_title(@sport_game) %></p>
+      </div>
+    </div>
+  </section>

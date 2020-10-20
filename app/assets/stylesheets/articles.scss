@@ -1,0 +1,51 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  bottom: 5%;
+  font-size: 25px;
+  color: #ec612f;
+}
+
+.top-cat {
+  height: 450px;
+}
+
+.top-img {
+  height: 450px;
+  width: 100%;
+}
+
+.cat-img {
+  height: 300px;
+  width: 100%;
+}
+
+h2 {
+  top: 8%;
+  border-bottom: 4px solid #faef1e;
+}
+
+.cat-links {
+  color: #fdfdfd !important;
+  text-decoration: none !important;
+}
+
+.category-title {
+  bottom: 10%;
+  font-size: 25px;
+  color: #e0dfde;
+}
+
+.article {
+  color: #ec612f;
+  width: 1000px;
+  height: 700px;
+  background-color: #4e433d;
+  margin: 30px auto;
+}
+
+.text-field {
+  height: 300px;
+  width: 500px;
+}

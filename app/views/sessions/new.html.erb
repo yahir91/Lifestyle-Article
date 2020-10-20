@@ -1,0 +1,14 @@
+<p id=”alert”><%= alert %></p>
+<p id="notice"><%= notice %></p>
+
+<%= form_tag sessions_path do %>
+<div class="container-fluid">
+<div class="user-field d-flex flex-column align-items-center justify-content-center">
+  <%= label_tag(:name, "Username") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Log in") %>
+<% end %>
+</div>
+</div>
+<br/>
+<hr>
