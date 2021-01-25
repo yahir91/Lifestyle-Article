@@ -6,7 +6,7 @@ This Ruby on rails Capstone Project is based on an life style blog. Following th
 ![screenshot](./app/assets/images/app-screenshot.png)
 
 ## Live Demo
-[Live Demo Link](https://young-ravine-05224.herokuapp.com/)
+[Live Demo Link](https://glacial-dawn-02646.herokuapp.com/)
 
 ## Built With
 
