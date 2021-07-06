@@ -3,7 +3,7 @@
 This is a blog app where you can write games articles and vote for articles created by another users.
 This Ruby on rails Capstone Project is based on an life style blog. Following the desing of [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) (by Nelson Sakwa).
 
-![screenshot](./app/assets/images/app-screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Live Demo
 [Live Demo Link](https://glacial-dawn-02646.herokuapp.com/)
